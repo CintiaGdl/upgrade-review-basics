@@ -32,4 +32,17 @@ const users = [
         }
     },
 ]
+let sum = 0;
+let count = 0;
 
+for (const user of users) {
+    for (const key in user) {
+        if (key === 'favoritesSounds') {
+            for (const typeSound in user[key]) {
+                sum += user[key][typeSound].volume;
+                count++;
+            }
+        }
+    }
+}
+console.log(sum / count);
