@@ -4,3 +4,10 @@ dado que deberá silumar el codigo dentro de la función. Como hemos dicho, que 
 para simular una tirada de dado y retornar el resultado. Si no se te ocurre como hacer un numero aleatorio 
 no te preocupes! busca información sobre la función de javascript Math.random();
 */
+
+function rollDice (numberFaces) {
+    
+    return Math.ceil(Math.random() * numberFaces);
+}
+
+console.log(rollDice(6));
