@@ -37,3 +37,24 @@ const users = [
         }
     },
 ]
+
+
+function favoriteSoundsCounter (users) {
+    
+    let counter = {};
+
+    for (const user of users) {
+        for (const sounds in user.favoritesSounds) {
+            if (!counter.hasOwnProperty(sounds)) {
+                counter[sounds] = 1;
+            } else {
+                counter[sounds]++;
+            }
+        }
+    }
+    return counter;
+}
+
+const result = favoriteSoundsCounter(users);
+
+console.log(result);
